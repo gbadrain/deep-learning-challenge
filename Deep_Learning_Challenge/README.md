@@ -3,9 +3,6 @@
 ## Neural Network Model Analysis
 
 This repository contains a deep learning model for predicting whether charity applications will be successful using the Alphabet Soup dataset. The model aims to classify applications as successful (1) or unsuccessful (0) based on various organizational and application features.
-
-## Overview of the Analysis
-
 - **Purpose:** Predict whether a charity application is successful ("IS_SUCCESSFUL") using deep learning.
 - **Approach:** Extensive data preprocessing, feature engineering, and a shallow neural network were applied and compared against potential ensemble methods.
 
@@ -137,12 +134,10 @@ history = model.fit(
 )
 ```
 Source : Copilot AI
-## Summary
+
+## Summary Of Experiments
 
 The current neural network achieved approximately 75.8% accuracy with solid recall (90.5%) and moderate precision (71.6%) using a simple three-hidden-layer architecture. While this provides a good baseline, implementing the recommended improvements has the potential to boost overall performance.
-
-## Summary of Experiments
-
 Throughout the model development process, several experiments were conducted to optimize performance:
 
 ### Initial Model (`AlphabetSoupCharity.ipynb`)
@@ -164,12 +159,6 @@ Throughout the model development process, several experiments were conducted to 
 2. **Wider Networks**: Increasing neurons to 100+ showed minimal improvement with higher computational cost
 3. **Activation Functions**: Tested tanh, ELU, and various combinations; ReLU/Sigmoid mix performed best
 4. **Regularization**: L1, L2, and dropout were tested; dropout between 0.2-0.3 showed optimal results
-
-### Failed Experiments
-- Removing the binning of `APPLICATION_TYPE` decreased accuracy by ~3%
-- Using only ReLU activations throughout the network led to "dying ReLU" issues
-- Batch normalization unexpectedly degraded performance slightly in this specific case
-- Training for 100+ epochs led to clear overfitting without improved validation metrics
 
 The progression from initial to optimized model demonstrates the importance of architectural choices and preprocessing strategies in neural network development. Further work with ensemble methods may yield additional performance gains beyond what was achieved with the neural network alone.
 
@@ -200,7 +189,7 @@ Deep_Learning_Challenge/
 
 1. Clone this repository:
    ```
-   git clone https://github.com/your-username/Deep_Learning_Challenge.git
+   git clone https://github.com/gbadrain/Deep_Learning_Challenge.git
    ```
 
 2. Install required packages:
