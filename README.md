@@ -1,5 +1,5 @@
 # Charity Application Success Prediction Model
-## Use link for more details on Model experiments : [MODEL](https://github.com/gbadrain/deep-learning-challenge/blob/main/Deep_Learning_Challenge/MODELS.md)
+## Use link for more details on Model experiments : [MODEL ANALYSIS](https://github.com/gbadrain/deep-learning-challenge/blob/main/Deep_Learning_Challenge/MODELS.md)
 
 ## Neural Network Model Analysis
 
@@ -173,7 +173,7 @@ Deep_Learning_Challenge/
 ├── Images/                                    # Documentation screenshots
 │   ├── AlphabetSoupCharity_Optimization.pdf
 │   └── AlphabetSoupCharity.pdf
-|__ MODELS.md                                  # Various Models Evaluation  
+|__ neural_network_analysis.md                 # Various Models Evaluation  
 └── README.md                                  # Report on the Neural Network Model
 ```
 
