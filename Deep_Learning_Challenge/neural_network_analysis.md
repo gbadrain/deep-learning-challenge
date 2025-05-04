@@ -22,14 +22,13 @@ The initial implementation utilizes a straightforward architecture with minimal 
 
 **Model Parameters:**
 - Total trainable parameters: 501
-
 Model 1 Parameters Summary
-![Screenshot 2025-05-03 at 6 18 39 PM](https://github.com/user-attachments/assets/da3fde90-c30d-4687-b3ac-d628a64f3275)
+![Screenshot 2025-05-03 at 6 18 39 PM](https://github.com/user-attachments/assets/7ade032a-9450-42ea-8ea0-132f79126124)
+
 
 **Training Performance:**
-
 Model 1 Accuracy/Loss Curves
-Screenshot 2025-05-03 at 6.19.06 PM
+![Screenshot 2025-05-03 at 6 19 06 PM](https://github.com/user-attachments/assets/69619d88-1686-480b-a936-12b051fee02f)
 
 **Architectural Limitations:**
 - Inappropriate output activation function (ReLU instead of sigmoid)
