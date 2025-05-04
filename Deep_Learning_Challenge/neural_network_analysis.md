@@ -23,11 +23,14 @@ The initial implementation utilizes a straightforward architecture with minimal 
 **Model Parameters:**
 - Total trainable parameters: 501
 
-[IMAGE PLACEHOLDER: Model 1 Parameters Summary]
+Model 1 Parameters Summary
+![Screenshot 2025-05-03 at 6 18 39 PM](https://github.com/user-attachments/assets/da3fde90-c30d-4687-b3ac-d628a64f3275)
 
 **Training Performance:**
 
-[IMAGE PLACEHOLDER: Model 1 Accuracy/Loss Curves]
+Model 1 Accuracy/Loss Curves
+Screenshot 2025-05-03 at 6.19.06 PM
+
 **Architectural Limitations:**
 - Inappropriate output activation function (ReLU instead of sigmoid)
 - Limited model capacity with only 501 parameters
