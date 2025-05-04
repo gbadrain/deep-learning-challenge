@@ -1,5 +1,5 @@
 # Charity Application Success Prediction Model
-## Use link for more details on Model experiments : [MODEL ANALYSIS](https://github.com/gbadrain/deep-learning-challenge/blob/main/Deep_Learning_Challenge/MODELS.md)
+## Use link for more details on Model experiments : [MODEL ANALYSIS](https://github.com/gbadrain/deep-learning-challenge/blob/main/Deep_Learning_Challenge/neural_network_analysis.md)
 
 ## Neural Network Model Analysis
 
