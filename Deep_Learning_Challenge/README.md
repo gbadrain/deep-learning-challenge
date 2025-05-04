@@ -181,9 +181,9 @@ Deep_Learning_Challenge/
 │   ├── AlphabetSoupCharity_Optimization.h5    # Optimized model weights
 │   └── AlphabetSoupCharity.h5                 # Initial model weights
 ├── Images/                                    # Documentation screenshots
-│   ├── AlphabetSoupCharity_Optimization.ipynb - Colab.pdf
-│   └── AlphabetSoupCharity.ipynb - Colab.pdf
-└── README.md                                  # This documentation file
+│   ├── AlphabetSoupCharity_Optimization.pdf
+│   └── AlphabetSoupCharity.pdf
+└── README.md                                  # Report on the Neural Network Model
 ```
 
 ## Getting Started
