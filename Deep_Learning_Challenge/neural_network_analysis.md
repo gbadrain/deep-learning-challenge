@@ -10,7 +10,8 @@ This technical report evaluates three distinct neural network architectures impl
 The initial implementation utilizes a straightforward architecture with minimal preprocessing and a simple layer structure.
 
 **Preprocessing Approach:**
-- Removal of non-predictive ID columns (EIN and NAME)
+- `EIN` (unique ID, no predictive power)
+- High-cardinality field `NAME` was binned to reduce noise.
 - Standard feature scaling
 
 **Architecture Details:**
@@ -27,7 +28,6 @@ The initial implementation utilizes a straightforward architecture with minimal 
 **Training Performance:**
 
 [IMAGE PLACEHOLDER: Model 1 Accuracy/Loss Curves]
-
 **Architectural Limitations:**
 - Inappropriate output activation function (ReLU instead of sigmoid)
 - Limited model capacity with only 501 parameters
