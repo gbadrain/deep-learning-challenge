@@ -1,5 +1,5 @@
 # Charity Application Success Prediction Model
-## Use link for more details on Model experiments : (MODELS.md)
+## Use link for more details on Model experiments : [(MODELS.md)](https://github.com/gbadrain/deep-learning-challenge/blob/main/Deep_Learning_Challenge/MODELS.md)
 ## Neural Network Model Analysis
 
 This repository contains a deep learning model for predicting whether charity applications will be successful using the Alphabet Soup dataset. The model aims to classify applications as successful (1) or unsuccessful (0) based on various organizational and application features.
