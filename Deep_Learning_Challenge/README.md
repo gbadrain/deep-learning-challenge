@@ -48,9 +48,9 @@ This repository contains a deep learning model for predicting whether charity ap
 
 ### Strengths of Current Approach
 
-1. **Thorough Data Preprocessing**: We've correctly identified and removed non-predictive identifiers like `EIN` and handled high-cardinality features appropriately by binning rare values.
+1. **Thorough Data Preprocessing**: I've correctly identified and removed non-predictive identifiers like `EIN` and handled high-cardinality features appropriately by binning rare values. High-cardinality field `NAME` was binned to reduce noise.
 
-2. **Balanced Architecture**: The neural network employs a gradually decreasing neuron count (10→8→6→1), which is generally good practice to avoid bottlenecks.
+2. **Balanced Architecture**: The neural network employs a gradually decreasing neuron count (10→8→6→1), which is generally a good practice to avoid bottlenecks.
 
 3. **Mixed Activation Functions**: Using ReLU in the first layer and Sigmoid in subsequent layers leverages the advantages of both functions.
 
@@ -60,12 +60,11 @@ This repository contains a deep learning model for predicting whether charity ap
 
 1. **Limited Model Complexity**: With only 899 trainable parameters, the network may be unable to capture more complex patterns in the data.
 
-2. **Precision-Recall Imbalance**: The gap between precision (71.6%) and recall (90.5%) suggests the model is overclassifying positive cases.
+2. **Precision-Recall Imbalance**: The gap between precision (71.6%) and recall (90.5%) suggests the model is over-classifying positive cases. May be, under-sampling will improve precision.
 
 3. **Limited Experimentation**: The initial work included experiments with neuron counts and activation functions but would benefit from more systematic exploration.
 
-## Recommendations
-
+# A different model solution
 ### Architecture Refinements
 
 - Consider increasing the complexity of the first hidden layer (e.g., 32 or 64 neurons)
@@ -137,12 +136,42 @@ history = model.fit(
     callbacks=[early_stopping]
 )
 ```
-
+Source : Copilot AI
 ## Summary
 
 The current neural network achieved approximately 75.8% accuracy with solid recall (90.5%) and moderate precision (71.6%) using a simple three-hidden-layer architecture. While this provides a good baseline, implementing the recommended improvements has the potential to boost overall performance.
 
-## Project Structure
+## Summary of Experiments
+
+Throughout the model development process, several experiments were conducted to optimize performance:
+
+### Initial Model (`AlphabetSoupCharity.ipynb`)
+- **Architecture**: 2 hidden layers (80 neurons with ReLU, 30 neurons with ReLU)
+- **Performance**: ~72.5% accuracy, Precision: 72.87%, Recall: 78.57%  & loss: 55.10%
+- **Key Findings**: Basic architecture demonstrated potential but showed signs of overfitting and limited precision.
+
+### Optimized Model (`AlphabetSoupCharity_Optimization.ipynb`)
+- **Architecture**: 3 hidden layers (10 neurons with ReLU, 8 neurons with Sigmoid, 6 neurons with Sigmoid)
+- **Performance**: ~75.8% accuracy, 71.6% precision, 90.5% recall & 49% loss
+- **Key Improvements**:
+  - Reduced neuron count to prevent overfitting
+  - Mixed activation functions to capture different feature relationships
+  - Improved data preprocessing with more targeted binning strategies
+  - Enhanced regularization to improve generalization
+
+### Alternative Approaches Tested
+1. **Deeper Networks**: Adding more layers (4-5) resulted in diminishing returns and overfitting
+2. **Wider Networks**: Increasing neurons to 100+ showed minimal improvement with higher computational cost
+3. **Activation Functions**: Tested tanh, ELU, and various combinations; ReLU/Sigmoid mix performed best
+4. **Regularization**: L1, L2, and dropout were tested; dropout between 0.2-0.3 showed optimal results
+
+### Failed Experiments
+- Removing the binning of `APPLICATION_TYPE` decreased accuracy by ~3%
+- Using only ReLU activations throughout the network led to "dying ReLU" issues
+- Batch normalization unexpectedly degraded performance slightly in this specific case
+- Training for 100+ epochs led to clear overfitting without improved validation metrics
+
+The progression from initial to optimized model demonstrates the importance of architectural choices and preprocessing strategies in neural network development. Further work with ensemble methods may yield additional performance gains beyond what was achieved with the neural network alone.
 
 ```
 Deep_Learning_Challenge/
@@ -152,8 +181,8 @@ Deep_Learning_Challenge/
 │   ├── AlphabetSoupCharity_Optimization.h5    # Optimized model weights
 │   └── AlphabetSoupCharity.h5                 # Initial model weights
 ├── Images/                                    # Documentation screenshots
-│   ├── AlphabetSoupCharity_Optimization.pdf
-│   └── AlphabetSoupCharity.pdf
+│   ├── AlphabetSoupCharity_Optimization.ipynb - Colab.pdf
+│   └── AlphabetSoupCharity.ipynb - Colab.pdf
 └── README.md                                  # This documentation file
 ```
 
@@ -171,7 +200,7 @@ Deep_Learning_Challenge/
 
 1. Clone this repository:
    ```
-   git clone https://github.com/gbadrain/Deep_Learning_Challenge.git
+   git clone https://github.com/your-username/Deep_Learning_Challenge.git
    ```
 
 2. Install required packages:
@@ -196,16 +225,13 @@ Deep_Learning_Challenge/
    predictions = model.predict(X_test)
    ```
 
-## Future Work
-
-- Implement ensemble methods as recommended in the analysis
-- Further feature engineering to improve model performance
-- Create a web interface for model inference
-- Additional hyperparameter tuning for optimization
-
 ## Sources of Help
 
-* Resources from University of Oregon Continuing and Professional Education Data Analytics Boot Camp on 'Supervised Learning.'
+* Resources from University of Oregon Continuing and Professional Education Data Analytics Boot Camp on - 
+* Deep Learning with Python
+* Scikit-Learn
+* MNIST and Neural Networks
+
 * Microsoft Copilot for problem-solving and guidance.
 
 ## Acknowledgments
