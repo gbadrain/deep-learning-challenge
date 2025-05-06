@@ -72,6 +72,8 @@ Model 2 Accuracy/Loss Curves
 
 ### Model 3: Hybrid Random Forest + Neural Network
 This implementation employs a two-stage approach combining Random Forest for feature selection with a neural network classifier.
+![Screenshot 2025-05-03 at 6 32 39 PM](https://github.com/user-attachments/assets/b082a94d-2c26-4094-899d-5002cb1bb2d2)
+
 
 **Feature Selection Strategy:**
 - Random Forest Classifier with 200 estimators
