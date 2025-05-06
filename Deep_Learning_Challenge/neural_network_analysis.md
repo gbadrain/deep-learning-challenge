@@ -99,8 +99,7 @@ Model 3 Parameters Summary
 
 **Training Performance:**
 
-Model 3 Accuracy/Loss Curves
-![Screenshot 2025-05-03 at 6 34 42 PM](https://github.com/user-attachments/assets/52e9c895-9eca-40dd-8650-229e47dae3f0)
+[IMAGE PLACEHOLDER: Model 3 Accuracy/Loss Curves]
 
 **Performance Metrics:**
 - Accuracy: 75.8%
