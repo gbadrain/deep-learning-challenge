@@ -157,6 +157,20 @@ Model 3 Accuracy/Loss Curves
 - Potential information loss through feature elimination
 - Sigmoid activations in middle layers
 
+### An alternative approach would be using Gradient Boosting Machines (GBMs) like XGBoost or LightGBM instead of a hybrid Random Forest + Neural Network model. Here’s why:
+
+**Advantages of Using GBMs**
+**Improved Feature Selection**
+Unlike traditional Random Forest, GBMs sequentially refine weak models, prioritizing the most impactful features dynamically. This can enhance interpretability while maintaining predictive power.
+
+**Better Handling of Imbalanced Data**
+Since recall was a key strength of Model 3, GBMs could further optimize it by focusing on misclassified instances during training, reducing bias toward majority-class samples.
+
+**Reduced Computational Overhead**
+While the hybrid approach involves two stages (Random Forest for feature selection + Neural Network for classification), GBMs offer a single-stage, optimized workflow that streamlines both feature importance ranking and classification.
+
+**Robust Performance Without Extensive Hyperparameter Tuning**
+Deep learning models, like Model 2, require meticulous fine-tuning (dropout rates, activation functions, learning rates). GBMs, in contrast, achieve strong results with fewer manual adjustments.
 
 ## Conclusion
 
