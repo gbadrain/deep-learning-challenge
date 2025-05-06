@@ -51,7 +51,9 @@ This implementation significantly expands model capacity and introduces more app
 **Model Parameters:**
 - Total trainable parameters: 19,969
 
-[IMAGE PLACEHOLDER: Model 2 Parameters Summary]
+Model 2 Parameters Summary
+
+![Screenshot 2025-05-03 at 6 28 56 PM](https://github.com/user-attachments/assets/afeb0b09-3ef2-4d7e-8f47-02fc9d96b233)
 
 **Optimization Strategy:**
 - Adam optimizer with adaptive learning rates
@@ -60,10 +62,11 @@ This implementation significantly expands model capacity and introduces more app
 
 **Training Performance:**
 
-[IMAGE PLACEHOLDER: Model 2 Accuracy/Loss Curves]
+Model 2 Accuracy/Loss Curves
+![Screenshot 2025-05-03 at 6 30 14 PM](https://github.com/user-attachments/assets/4c9fb425-2cbd-4dad-92d2-c651c8050a1f)
 
 **Performance Metrics:**
-- Accuracy: 76.2%
+- Accuracy: 75.6%
 - Precision: ~72%
 - Recall: ~88%
 
@@ -87,7 +90,8 @@ This implementation employs a two-stage approach combining Random Forest for fea
 **Model Parameters:**
 - Total trainable parameters: 899
 
-[IMAGE PLACEHOLDER: Model 3 Parameters Summary]
+Model 3 Parameters Summary
+![Screenshot 2025-05-03 at 6 34 08 PM](https://github.com/user-attachments/assets/34f288ef-2f3d-4cc5-a6d3-8735a513bfb6)
 
 **Training Configuration:**
 - Epochs: 30
@@ -95,7 +99,8 @@ This implementation employs a two-stage approach combining Random Forest for fea
 
 **Training Performance:**
 
-[IMAGE PLACEHOLDER: Model 3 Accuracy/Loss Curves]
+Model 3 Accuracy/Loss Curves
+![Screenshot 2025-05-03 at 6 34 42 PM](https://github.com/user-attachments/assets/52e9c895-9eca-40dd-8650-229e47dae3f0)
 
 **Performance Metrics:**
 - Accuracy: 75.8%
@@ -109,7 +114,7 @@ This implementation employs a two-stage approach combining Random Forest for fea
 | Architecture | 2 hidden layers | 3 hidden layers | RF + 3 hidden layers |
 | Parameters | 501 | 19,969 | 899 |
 | Output Activation | ReLU | Sigmoid | Sigmoid |
-| Accuracy | ~75% | 76.2% | 75.8% |
+| Accuracy | ~73% | 75.6% | 75.8% |
 | Precision | Not reported | ~72% | 71.6% |
 | Recall | Not reported | ~88% | 90.5% |
 | Feature Engineering | Basic | Moderate | Advanced |
