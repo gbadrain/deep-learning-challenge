@@ -137,7 +137,7 @@ Model 3 Accuracy/Loss Curves
 
 ### Model 2
 **Strengths:**
-- Highest overall accuracy (76.2%)
+- Highest overall accuracy (76.61%)
 - Comprehensive feature extraction capability
 - Appropriate activation functions
 
@@ -149,7 +149,7 @@ Model 3 Accuracy/Loss Curves
 ### Model 3
 **Strengths:**
 - Superior feature selection through Random Forest
-- Highest recall rate (90.5%)
+- Highest recall rate (88.82%)
 - Efficient parameter utilization (95% reduction vs Model 2)
 
 **Limitations:**
@@ -157,32 +157,6 @@ Model 3 Accuracy/Loss Curves
 - Potential information loss through feature elimination
 - Sigmoid activations in middle layers
 
-## Recommendations for Further Optimization
-
-1. **Architecture Refinement:**
-   - Implement a model with Model 2's depth but improved parameter efficiency
-   - Consider alternative hidden layer activation functions (Leaky ReLU, Swish)
-   - Maintain sigmoid activation for output layer
-
-2. **Regularization Implementation:**
-   - Add dropout layers to prevent overfitting
-   - Implement batch normalization for training stability
-   - Consider L2 regularization for weight constraints
-
-3. **Advanced Optimization:**
-   - Implement learning rate scheduling
-   - Explore hyperparameter optimization via Bayesian techniques
-   - Consider class weighting if data imbalance exists
-
-4. **Ensemble Approach:**
-   - Develop a voting classifier combining predictions from all models
-   - Implement stacking with a meta-learner
-   - Explore boosting techniques for sequential model improvement
-
-5. **Feature Engineering:**
-   - Retain Model 3's feature importance approach
-   - Explore dimensionality reduction via PCA or t-SNE
-   - Investigate interaction terms between high-importance features
 
 ## Conclusion
 
