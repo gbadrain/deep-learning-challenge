@@ -227,7 +227,7 @@ Deep_Learning_Challenge/
 
 ## Acknowledgments
 
-This project was created as part of a professional development challenge inspired by the Module 20 curriculum. Special thanks to the developers of open-source tools and libraries that made this analysis possible.
+This project was created as part of a professional development challenge inspired by the Module 21 curriculum. Special thanks to the developers of open-source tools and libraries that made this analysis possible.
 
 ## Contact
 
